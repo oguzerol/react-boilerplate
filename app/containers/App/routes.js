@@ -1,0 +1,3 @@
+// Home
+export const HOME = '/';
+

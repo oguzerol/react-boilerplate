@@ -1,26 +1,23 @@
-/**
- *
- * App.js
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
- *
- */
-
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+import { MainLayout } from 'components/Layout/layout';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
-import GlobalStyle from '../../global-styles';
+import { AppRoute } from 'utils/layoutUtils';
+
+import { HOME } from './routes';
+
+import GlobalStyle from './global-styles';
 
 export default function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
+        <AppRoute exact path={HOME} layout={MainLayout} component={HomePage} />
+        <AppRoute layout={MainLayout} component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
     </div>
