@@ -3,12 +3,11 @@ import styled, { css } from 'styled-components';
 const Content = styled.div`
   display: flex;
   width: 100%;
-  color:white;
+  color: black;
 `;
 
 const Layout = styled.div`
   display: flex;
-  background: red;
 `;
 
 const Wrapper = styled.div`
@@ -22,5 +21,4 @@ const Wrapper = styled.div`
     `};
 `;
 
-
-export { Layout, Content,  Wrapper };
+export { Layout, Content, Wrapper };

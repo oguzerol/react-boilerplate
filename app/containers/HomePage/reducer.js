@@ -1,16 +1,15 @@
 import { fromJS } from 'immutable';
-import { CHANGE_NAME } from "./actions";
+import { CHANGE_NAME } from "./constants";
 
 // The initial state of the App
 export const initialState = fromJS({
-  name: 'oguzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+  username: 'oguz',
 });
 
 function homeReducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_NAME:
-      // Delete prefixed '@' from the github username
-      return state.set('user', action.name);
+      return state.set('username', action.text);
     default:
       return state;
   }
